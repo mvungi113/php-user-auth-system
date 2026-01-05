@@ -25,7 +25,7 @@ if (is_post_request()) {
     }
 
     if (login($inputs['username'], $inputs['password'])) {
-        redirect_to('index.php');
+        redirect_to('dashboard.php');
     } else {
         $errors['login'] = 'Invalid username or password';
         redirect_with('login.php', [
