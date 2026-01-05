@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/src/bootstrap.php';
+require __DIR__ . '/../src/bootstrap.php';
 
 // Check if user is logged in
 if (is_user_logged_in()) {
@@ -29,8 +29,8 @@ view('header', ['title' => 'Home']);
         <p>Please login or register to continue.</p>
         
         <div>
-            <a href="public/login.php">Login</a>
-            <a href="public/register.php">Register</a>
+            <a href="login.php">Login</a>
+            <a href="register.php">Register</a>
         </div>
     <?php endif; ?>
 </main>

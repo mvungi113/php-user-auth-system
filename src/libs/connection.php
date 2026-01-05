@@ -1,0 +1,25 @@
+<?php
+
+// coonnect to the database and return an instance of PDO class
+
+function db() : PDO 
+
+{
+    static $pdo;
+
+    if(!$pdo){
+        $pdo = new PDO(
+            sprintf(
+                "mysql:host=%s; dbname=%s;charset=utf8mb4",
+                DB_HOST, DB_NAME
+            ), 
+            DB_USER, 
+            DB_PASSWORD,
+            [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+        );
+        }
+        return $pdo;
+
+    }
+
+    ?>
